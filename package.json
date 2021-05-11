@@ -4,7 +4,7 @@
   "description": "Pruebas automatizadas del sistema de tienda de ropa",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress run"
   },
   "keywords": [
     "Pruebas",
@@ -22,5 +22,9 @@
   "dependencies": {
     "cypress": "^7.3.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url":"https://github.com/luishz2009/tiendaDeRopaCypress"
+  }
 }

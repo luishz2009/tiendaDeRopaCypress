@@ -5,7 +5,7 @@
 //
 // For more comprehensive examples of custom
 // commands please read more here:
-// https://on.cypress.io/custom-commands
+// https://on.cypress.io/custom-commands ->página para buscar comandos personalizados
 // ***********************************************
 //
 //
@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('search',(value)=>{
+  cy.fixture('index').then((index)=>{
+    cy.get(index.searchBox).type(value);  //Se cambia 'dress' por value para que busque por cualquier cosa
+    cy.get(index.searchButton).click();
+  })
+})
